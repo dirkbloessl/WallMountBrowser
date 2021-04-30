@@ -1,11 +1,21 @@
 import UIKit
 import Foundation
 
-class WallMountBrowserApplication: UIApplication {
-    
+class WallMountBrowserApplication: UIApplication, RemoteCommandHandlerDelegate {
+
     override init() {
         super.init()
         resetIdleTimer()
+        //let currentVC = UIApplication.shared.keyWindow?.rootViewController as? MainController
+        //let mainWindow = self.delegate?.window
+        initmqtt()
+    }
+    
+    public func initmqtt()
+    {
+        remoteCommandHandler = RemoteCommandHandler()
+        remoteCommandHandler.delegate = self
+        remoteCommandHandler.start()
     }
     
     private var timeoutInSeconds: TimeInterval {
@@ -15,7 +25,8 @@ class WallMountBrowserApplication: UIApplication {
     
     private var idleTimer: Timer?
     private var initialized = false;
-    
+    private var remoteCommandHandler: RemoteCommandHandler!
+
     // reset the timer because there was user interaction
     private func resetIdleTimer() {
         if let idleTimer = idleTimer {
@@ -56,6 +67,14 @@ class WallMountBrowserApplication: UIApplication {
                 self.resetIdleTimer()
             }
         }
+    }
+    
+    func timeoutChanged(command: RemoteCommandHandler)
+    {
+    }
+    
+    func urlChanged(command: RemoteCommandHandler)
+    {
     }
 }
 

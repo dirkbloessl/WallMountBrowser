@@ -1,1 +1,2 @@
 github "alexaubry/BulletinBoard" "5.0.0"
+github "nanosonde/SwiftMQTT" "3809c7dfcb1a2132d0a4f9a2d8bf877070ef3282"

@@ -1,3 +1,3 @@
 github "alexaubry/BulletinBoard" ~> 5.0
-github "https://github.com/anatoliykant/SwiftMQTT"
+github "https://github.com/nanosonde/SwiftMQTT" "develop"
 

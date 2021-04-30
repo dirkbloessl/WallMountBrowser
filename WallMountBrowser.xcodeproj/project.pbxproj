@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A18ECA262976CE00682A9B /* SwiftMQTT.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A18EC8262976C900682A9B /* SwiftMQTT.xcframework */; };
+		84A18ECB262976CE00682A9B /* SwiftMQTT.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84A18EC8262976C900682A9B /* SwiftMQTT.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84A18ECD2631954A00682A9B /* RemoteCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A18ECC2631954A00682A9B /* RemoteCommandHandler.swift */; };
 		9A728BD925AB0D640055072F /* BulletinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A728BD825AB0D640055072F /* BulletinDataSource.swift */; };
 		9A728BE625AB8FAE0055072F /* URLFieldBulletinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A728BE525AB8FAE0055072F /* URLFieldBulletinPage.swift */; };
 		9A8941D325A8D559007DC3FC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A8941D225A8D559007DC3FC /* Settings.bundle */; };
@@ -34,6 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9ABE011B25ACC54A008E60BF /* BLTNBoard.xcframework in Embed Frameworks */,
+				84A18ECB262976CE00682A9B /* SwiftMQTT.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84A18EC8262976C900682A9B /* SwiftMQTT.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftMQTT.xcframework; path = Carthage/Build/SwiftMQTT.xcframework; sourceTree = "<group>"; };
+		84A18ECC2631954A00682A9B /* RemoteCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandHandler.swift; sourceTree = "<group>"; };
 		9A728BD825AB0D640055072F /* BulletinDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinDataSource.swift; sourceTree = "<group>"; };
 		9A728BE525AB8FAE0055072F /* URLFieldBulletinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFieldBulletinPage.swift; sourceTree = "<group>"; };
 		9A8941D225A8D559007DC3FC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABE011A25ACC54A008E60BF /* BLTNBoard.xcframework in Frameworks */,
+				84A18ECA262976CE00682A9B /* SwiftMQTT.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +103,7 @@
 		9A8941DE25A9BD66007DC3FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A18EC8262976C900682A9B /* SwiftMQTT.xcframework */,
 				9ABE011925ACC54A008E60BF /* BLTNBoard.xcframework */,
 			);
 			name = Frameworks;
@@ -142,6 +150,7 @@
 				9A8941D525A8D643007DC3FC /* SettingsBundleHelper.swift */,
 				9A8941D825A8DB97007DC3FC /* Assets.xcassets */,
 				9AA3C77B25AC817500A63921 /* Localizable.strings */,
+				84A18ECC2631954A00682A9B /* RemoteCommandHandler.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 				9A8941D625A8D643007DC3FC /* SettingsBundleHelper.swift in Sources */,
 				9AA3C77125AC7A6B00A63921 /* SwitchFieldBulletinItem.swift in Sources */,
 				9AAC586C25A87D00005D0908 /* SleepPopupViewController.swift in Sources */,
+				84A18ECD2631954A00682A9B /* RemoteCommandHandler.swift in Sources */,
 				9AAC586A25A87BCD005D0908 /* Extensions.swift in Sources */,
 				9AAC586325A87A47005D0908 /* MainController.swift in Sources */,
 				9AAC585E25A879E1005D0908 /* AppDelegate.swift in Sources */,
