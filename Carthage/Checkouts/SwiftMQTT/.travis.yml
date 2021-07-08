@@ -1,0 +1,14 @@
+language: swift
+os: osx
+osx_image: xcode11.3
+xcode_sdk: iphonesimulator13.2
+
+before_install:
+    # - brew update
+
+script:
+    # - /usr/local/opt/mosquitto/sbin/mosquitto -d
+    - xcodebuild -project SwiftMQTT/SwiftMQTT.xcodeproj -scheme SwiftMQTT -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11 Pro" build test
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)

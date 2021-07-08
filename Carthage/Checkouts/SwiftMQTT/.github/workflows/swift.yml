@@ -1,0 +1,20 @@
+name: Swift
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    strategy:
+        matrix:
+          destination: [ 'platform=iOS Simulator,name=iPhone 11 Pro' ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build and test
+        run: xcodebuild clean  build test -project SwiftMQTT/SwiftMQTT.xcodeproj -scheme SwiftMQTT -sdk iphonesimulator -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env: 
+         destination: ${{ matrix.destination }}

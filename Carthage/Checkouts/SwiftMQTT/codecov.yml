@@ -1,0 +1,11 @@
+codecov:
+  branch: develop
+
+coverage:
+  precision: 2
+  round: up
+  range: "3...100"
+
+  ignore:
+    - "SwiftMQTTExample"
+    - "SwiftMQTT/SwiftMQTTTests/.*"
