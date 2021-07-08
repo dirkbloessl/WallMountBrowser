@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="WallMountBrowser" customModuleProvider="target" sceneMemberID="viewController">
-                    <wkWebView key="view" contentMode="scaleToFill" id="PFS-Be-koa">
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="Wall_Mount_Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7af-uq-ynb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <gestureRecognizers/>
-                        <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                            <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
-                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
-                            <wkPreferences key="preferences"/>
-                        </wkWebViewConfiguration>
-                    </wkWebView>
+                        <viewLayoutGuide key="safeArea" id="fCa-gf-fP9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <connections>
-                        <outlet property="webView" destination="PFS-Be-koa" id="c12-Dm-r11"/>
+                        <outlet property="webViewContainer" destination="7af-uq-ynb" id="Uif-pP-vk7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -33,12 +30,12 @@
         <!--Sleep Popup View Controller-->
         <scene sceneID="xJG-hI-gwr">
             <objects>
-                <viewController storyboardIdentifier="sleepPopupVc" id="K9d-LY-DrC" customClass="SleepPopupViewController" customModule="WallMountBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sleepPopupVc" id="K9d-LY-DrC" customClass="SleepPopupViewController" customModule="Wall_Mount_Browser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tLs-pD-bTH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61c-Te-1YN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61c-Te-1YN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -50,6 +47,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ozb-1u-eVr"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="61c-Te-1YN" secondAttribute="trailing" id="5um-qO-vXp"/>
@@ -57,7 +55,6 @@
                             <constraint firstItem="61c-Te-1YN" firstAttribute="leading" secondItem="tLs-pD-bTH" secondAttribute="leading" id="ng1-ho-qWf"/>
                             <constraint firstItem="61c-Te-1YN" firstAttribute="bottom" secondItem="ozb-1u-eVr" secondAttribute="bottom" id="stH-8Q-68v"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ozb-1u-eVr"/>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="61c-Te-1YN" id="T5n-Ax-zf6"/>
@@ -68,4 +65,9 @@
             <point key="canvasLocation" x="730.43478260869574" y="26.90217391304348"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -42,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        //let myapp = application as? WallMountBrowserApplication
+        //myapp?.initmqtt()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
